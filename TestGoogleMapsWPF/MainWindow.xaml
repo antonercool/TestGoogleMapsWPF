@@ -1,0 +1,31 @@
+﻿<Window x:Class="TestGoogleMapsWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestGoogleMapsWPF"
+        xmlns:wpf="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="393*"/>
+        </Grid.RowDefinitions>
+
+        <WrapPanel x:Name="ButtonAddMarker" Grid.Column="0" Grid.Row="0" >
+            <Label Content="User latitude : "></Label>
+            <TextBox Width="200" Name="LatitudeTextBox" />
+            <Label Content="User longtitude : "></Label>
+            <TextBox Width="200" Name="LongtitudeTextBox"/>
+            <Button Content="Add Marker" Click="Button_Click" />
+        </WrapPanel>
+
+        <wpf:ChromiumWebBrowser Grid.Row="1" Grid.Column="0" Name="ChromiumWebBrowser" Address="C:\Users\Anton\source\repos\TestGoogleMapsWPF\TestGoogleMapsWPF\GoogleMaps\ApplicationGoogleMaps.html"></wpf:ChromiumWebBrowser>
+        <!--<WebBrowser Grid.Row="1" Grid.Column="0" Name="WebBrowser" Source= "C:\Users\Anton\source\repos\TestGoogleMapsWPF\TestGoogleMapsWPF\GoogleMaps\ApplicationGoogleMaps.html" />-->
+
+
+
+
+    </Grid>
+</Window>
